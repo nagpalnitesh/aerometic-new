@@ -1,0 +1,134 @@
+* {
+  overflow: hidden;
+}
+
+.myvideo {
+  position: relative;
+}
+.video {
+  width: 100%;
+  object-fit: cover;
+  left: 0%;
+  top: 0%;
+  overflow: hidden;
+  height: 100vh;
+  z-index: -2;
+  pointer-events: none;
+  filter: brightness(40%);
+}
+
+.logo {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: label 1s linear forwards;
+  animation-delay: 4s;
+  opacity: 0;
+}
+
+.label {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  letter-spacing: 1em;
+  text-align: center;
+  animation: label 1s linear forwards;
+  animation-delay: 4s;
+  opacity: 0;
+}
+
+@keyframes label {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.label h1,
+.ani1 h1,
+.ani h1 {
+  color: white;
+  font-weight: bold !important;
+  overflow: hidden;
+  font-size: 5em;
+}
+
+.scroll {
+  position: absolute;
+  top: 95%;
+  left: 95%;
+  transform: translate(-50%, -50%);
+  letter-spacing: 0.2em;
+  padding: 1em;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.scroll img {
+  width: 70%;
+}
+
+.scroll:hover {
+  text-decoration: none;
+  text-emphasis: none;
+}
+
+.ani {
+  position: absolute;
+  top: 50%;
+  left: -100%;
+  width: fit-content;
+  animation: ani 4s linear forwards;
+  letter-spacing: 0.4em;
+}
+
+@keyframes ani {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 27%;
+  }
+}
+
+.ani1 {
+  position: absolute;
+  top: 50%;
+  right: -100%;
+  width: fit-content;
+  animation: ani1 4s linear forwards;
+  letter-spacing: 0.4em;
+}
+
+@keyframes ani1 {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 11%;
+  }
+}
+
+.hide {
+  animation: hide 1s linear forwards;
+  animation-delay: 3s;
+}
+
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
